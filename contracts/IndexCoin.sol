@@ -4,13 +4,14 @@ pragma solidity 0.8.17;
 contract IndexCoin {
         // Store dataset index inforamtion on the chain
         struct Index {
-                string title;  // one-liner describing the dataset
-                string description;  // detailed description of the dataset
-                string keywords;  // comma seperated keywords
-                string cid;  // content id linking to the stored data
+                string title;  // One-liner describing the dataset
+                string description;  // Detailed description of the dataset
+                string keywords;  // Comma-seperated keywords
+                string cid;  // Content id identifying the stored data
         }
 
-        // An array of Index structs on the blockchain
+        // An array of Index structs on the blockchain, that an external processor will scrape
+        // and serve in a UI
         Index[] public index;
 
         function create (
