@@ -1,17 +1,21 @@
 from django.shortcuts import render
 
 from .models import Index
-from .filter import IndexFilter
+from .filter import SearchFilter, IndexFilter
 
 # Create your views here.
 def index(request):
-    # index_list = Index.objects.all().order_by('title')
-    # context = {'index_list': index_list}
-    # return render(request, 'index/index.html', context)
+    index_list = Index.objects.all()
+    filter = SearchFilter(request.GET, queryset=index_list)
+    context = {'filter': filter}
+    return render(request, 'index/index.html', context)
+
+
+def create(request):
     index_list = Index.objects.all()
     filter = IndexFilter(request.GET, queryset=index_list)
     context = {'filter': filter}
-    return render(request, 'index/index.html', context)
+    return render(request, 'index/create.html', context)
 
 
 def detail(request, index_id):

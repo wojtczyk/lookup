@@ -4,15 +4,14 @@
  {% block content %}
  <form method="get">
     {{ filter.form.as_p }}
-    <input type="submit" />
-    <input type="button" value="Reset" onclick="location.href='{% url 'index' %}';" />
+    <input type="submit" value="Search"/>
   </form>
-<table>
+<table class="table">
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Keywords</th>
-      <th>cid</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Keywords</th>
+      <th scope="col">cid</th>
     </tr>
     {% for index in filter.qs %}
     <tr>
