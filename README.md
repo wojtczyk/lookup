@@ -84,18 +84,18 @@ The console should read that your account has 10000 SimpleCoin!
 Type in the following command in the terminal: 
  
  ```
-yarn hardhat create-index \\
---contract "DEPLOYED CONTRACT ADDRESS" \\
---title "DATASET TITLE" \\
---description "DATASET DESCRIPTION" \\
---keywords "INDEXING KEYWORDS" \\
+yarn hardhat create-index \
+--contract "DEPLOYED CONTRACT ADDRESS" \
+--title "DATASET TITLE" \
+--description "DATASET DESCRIPTION" \
+--keywords "INDEXING KEYWORDS" \
 --cid "CONTENT ID"
 
 e.g.:
-yarn hardhat create-index \\
---contract "0xaDA9E5C68bF3e58bDC313856E94fa3AdF90eC329" \\
---title "wikipedia" \\
---description "Wikipedia Corpus" \\
---keywords "wikipedia,encyclopedia" \\
+yarn hardhat create-index \
+--contract "0xaDA9E5C68bF3e58bDC313856E94fa3AdF90eC329" \
+--title "wikipedia" \
+--description "Wikipedia Corpus" \
+--keywords "wikipedia,encyclopedia" \
 --cid "baga6ea4seaqlkg6mss5qs56jqtajg5ycrhpkj2b66cgdkukf2qjmmzz6ayksuci"
 ```
