@@ -1,0 +1,9 @@
+{% extends "index/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<p>{{ index.title }}</p>
+<p>{{ index.description }}</p>
+<p>{{ index.keywords }}</p>
+<p>{{ index.cid }}</p>
+{% endblock %}

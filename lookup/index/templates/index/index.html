@@ -1,0 +1,27 @@
+ {% extends "index/base.html" %}
+ {% load django_bootstrap5 %}
+ 
+ {% block content %}
+ <form method="get">
+    {{ filter.form.as_p }}
+    <input type="submit" />
+    <input type="button" value="Reset" onclick="location.href='{% url 'index' %}';" />
+  </form>
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Keywords</th>
+      <th>cid</th>
+    </tr>
+    {% for index in filter.qs %}
+    <tr>
+      <td><a href="{% url 'detail' index.id %}">{{ index.title }}</a></td>
+      <td><a href="{% url 'detail' index.id %}">{{ index.description }}</a></td>
+      <td><a href="{% url 'detail' index.id %}">{{ index.keywords }}</a></td>
+      <td><a href="{% url 'detail' index.id %}">{{ index.cid }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+ 
