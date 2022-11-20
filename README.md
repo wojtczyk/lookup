@@ -1,4 +1,15 @@
-# lookup
+# Lookup
+
+## Description
+
+Lookup - the filecoin search engine and distributed dataset index.
+
+Lookup consists of three parts: 
+1. An FEVM smart contract that stores indexes for datasets on the blockchain.
+2. A blockchain bot that collects all the index information from the smart contract and processes. 
+3. A web dApp where users can enter queries and search for the desired datasets or files.
+
+The smart contract is implemented in Solidity and we started off with the FEVM-hardhat-kit project to deploy and test the contract for adding index entries to the contract. These entries were then verified in GLIF explorer. The app is currently prototyped in python using Django. 
 
 based on FEVM Hardhat Kit
 https://github.com/filecoin-project/FEVM-Hardhat-Kit
