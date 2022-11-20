@@ -2,8 +2,14 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-<p>{{ index.title }}</p>
-<p>{{ index.description }}</p>
-<p>{{ index.keywords }}</p>
-<p>{{ index.cid }}</p>
+<ul>
+    <li><b>Title</b></li>
+    <ul><li>{{ index.title }}</li></ul>
+    <li><b>Description</b></li>
+    <ul><li>{{ index.description }}</li></ul>
+    <li><b>Keywords</b></li>
+    <ul><li>{{ index.keywords }}</li></ul>
+    <li><b>cid</b></li>
+    <ul><li>{{ index.cid }}</li></ul>
+</ul>
 {% endblock %}

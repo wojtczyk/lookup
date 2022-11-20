@@ -11,14 +11,12 @@
       <th scope="col">Title</th>
       <th scope="col">Description</th>
       <th scope="col">Keywords</th>
-      <th scope="col">cid</th>
     </tr>
     {% for index in filter.qs %}
     <tr>
       <td><a href="{% url 'detail' index.id %}">{{ index.title }}</a></td>
       <td><a href="{% url 'detail' index.id %}">{{ index.description }}</a></td>
       <td><a href="{% url 'detail' index.id %}">{{ index.keywords }}</a></td>
-      <td><a href="{% url 'detail' index.id %}">{{ index.cid }}</a></td>
     </tr>
     {% endfor %}
 </table>
