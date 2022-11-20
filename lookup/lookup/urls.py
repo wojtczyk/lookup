@@ -17,5 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path('index/', include('index.urls')),
     path("admin/", admin.site.urls),
 ]
+
+admin.site.site_header = 'Index Administration'                    # default: "Django Administration"
+admin.site.index_title = 'Index Administration'                    # default: "Site administration"
+admin.site.site_title = 'Index Administration'                     # default: "Django site admin"
